@@ -1,0 +1,227 @@
+body {
+  color: #c8cfc4;
+  background-color: #111111;
+}
+pre {
+  color: #c8cfc4;
+  background-color: #272727;
+  border: 1px solid #222222;
+}
+a {
+  color: #8eacba;
+}
+a:hover,
+a:focus {
+  color: #567b8c;
+}
+.btn {
+  font-weight: 400;
+}
+.btn-default {
+  border: 1px solid #555555;
+  color: #8eacba;
+  background-color: #2a2a2a;
+}
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid #8eacba;
+  outline: none;
+  color: black;
+  background-color: #8eacba;
+}
+body {
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+.list-group-item {
+  border-color: #474747;
+  background-color: transparent;
+}
+code {
+  background-color: #272727;
+}
+#wikiBody h1,
+#wikiBody h2,
+#wikiBody h3,
+#wikiBody h4,
+#wikiBody h5 {
+  border-bottom: 1px solid #555555;
+  /* */
+}
+.wikiTitle a {
+  color: #c8cfc4;
+}
+#wikiIcon a {
+  border: 1px solid #595959;
+  color: #555555;
+}
+#wikiBody a.externalLink {
+  color: #489a48;
+  text-decoration: underline;
+}
+#wikiBody del a.externalLink {
+  color: #809880;
+}
+#wikiBody a.nonexistent {
+  color: #92645b;
+}
+#wikiBody del {
+  color: #999999;
+}
+#wikiBody del a:link {
+  color: #5F90D0;
+}
+#wikiBody del a:visited {
+  color: #5F90D0;
+}
+#wikiBody del a.nonexistent {
+  color: #cc6161;
+}
+#wikiAction a {
+  color: #c8cfc4;
+}
+.separator hr {
+  color: #ccc;
+  background-color: #222222;
+}
+#edit-summary input {
+  border: 1px solid #222222;
+}
+#edit-summary input:focus {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+  border: 1px solid #222222;
+}
+/* buttons */
+table.info button,
+input.save-button,
+input.button {
+  font-weight: 400;
+  font-size: 13px;
+  padding: 3px 6px;
+}
+table.info button,
+input.button {
+  border: 1px solid #555555;
+  color: #8eacba;
+  background-color: #2a2a2a;
+}
+table.info button:hover,
+input.button:hover,
+table.info button:focus,
+input.button:focus {
+  border: 1px solid #8eacba;
+  outline: none;
+  color: black;
+  background-color: #8eacba;
+}
+a.button,
+a.button-small {
+  font-weight: 400;
+  border: 1px solid #555555;
+  color: #8eacba;
+  background-color: #2a2a2a;
+}
+a.button:hover,
+a.button-small:hover,
+a.button:focus,
+a.button-small:focus {
+  border: 1px solid #8eacba;
+  outline: none;
+  color: black;
+  background-color: #8eacba;
+}
+textarea {
+  color: black;
+}
+/* tables */
+table.info,
+table.wiki {
+  /* from .table-border */
+}
+table.info > thead > tr > th,
+table.wiki > thead > tr > th,
+table.info > tbody > tr > th,
+table.wiki > tbody > tr > th,
+table.info > tfoot > tr > th,
+table.wiki > tfoot > tr > th,
+table.info > thead > tr > td,
+table.wiki > thead > tr > td,
+table.info > tbody > tr > td,
+table.wiki > tbody > tr > td,
+table.info > tfoot > tr > td,
+table.wiki > tfoot > tr > td {
+  border: 1px solid #474444;
+}
+table.wiki {
+  background-color: #22221F;
+  /* #F8F7F0 */
+}
+blockquote.quote {
+  color: #000000;
+  border-left: 4px solid #A4BCCC;
+}
+blockquote.quote:before {
+  color: #879EAD;
+}
+.sectionEdit span a {
+  border: 1px solid #cccccc;
+}
+.recentChanges table {
+  border: 1px solid #474444;
+}
+.recentChanges td {
+  border-top: 1px solid #474747;
+}
+.recentChanges th {
+  background-image: linear-gradient(#565656, #404040);
+}
+.recentChanges tr.alt {
+  background-color: #212121;
+}
+a.perma {
+  color: #A7A7A7;
+  text-decoration: none;
+}
+#wikiPreview,
+#wikiDiffPreview {
+  border: 1px solid #474444;
+}
+/* wiki category */
+#wikiBody .wikiCategory {
+  border: 1px solid #474444;
+}
+#wikiBody .wikiCategory li {
+  border-left: 1px solid #474444;
+}
+.rssChanges h3 a {
+  color: #c8cfc4;
+}
+.rssChanges ul {
+  border-top: 1px solid #474444;
+}
+.rssChanges ul li {
+  border-bottom: 1px solid #474444;
+}
+.rssChanges ul li a {
+  color: #c8cfc4;
+}
+.rssChanges p.more a {
+  color: #aaaaaa;
+}
+.switch-pc-mobile {
+  background: #222;
+}
+a.switch-to-mobile {
+  color: #eaeaea;
+}
+a.switch-to-mobile:hover {
+  color: #eaeaea;
+}
+a.switch-to-pc {
+  color: #eaeaea;
+}
+a.switch-to-pc:hover {
+  color: #eaeaea;
+}
+span.diff-added {
+  color: #000;
+}
