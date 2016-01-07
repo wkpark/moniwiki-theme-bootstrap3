@@ -1,0 +1,50 @@
+@import "dark-vars.less";
+@import "moniwiki-dark-vars.less";
+@import "mixins.less";
+
+body {
+  color: @text-color;
+  background-color: @bg-color;
+}
+
+pre {
+  color: @pre-color;
+  background-color: @pre-bg;
+  border: 1px solid @pre-border-color;
+}
+
+a {
+  color: @primary-color;
+  &:hover,
+  &:focus {
+    color: darken(@primary-color,20%);
+  }
+}
+
+.btn {
+  font-weight: 400;
+}
+
+.btn-default {
+  border: 1px solid @border-color;
+  color: @primary-color;
+  background-color: @btn-default-bg;
+  &:hover,
+  &:focus {
+    border: 1px solid @primary-color;
+    outline: none;
+    color: black;
+    background-color: @primary-color;
+  }
+}
+
+body {
+  webkit-tap-highlight-color: fade(white, 20%);
+}
+
+.list-group-item {
+  border-color: #474747;
+  background-color: transparent;
+}
+
+@import "moniwiki-theme.less";

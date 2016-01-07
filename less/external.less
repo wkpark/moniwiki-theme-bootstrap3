@@ -1,0 +1,217 @@
+/**
+ * Moniwiki specific less file by wkpark@gmail.com
+ *
+ * @since 1.2.5p1
+ * @since 2016/01/06
+ *
+ * copy external.less into bootstrap/less/
+ */
+
+@image-info-color: #ffffff;
+@image-reference-link: #2c4c88;
+@image-max-width: 100%;
+@image-max-height: 100%;
+
+.imgLeft {
+  clear:right;
+  float:left;
+  margin-bottom : 5px;
+  margin-right : 15px;
+}
+.imgRight {
+  clear:left;
+  float:right;
+  margin-bottom : 5px;
+  margin-left : 10px;
+}
+.imgCenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgContainer.imgCenter,
+.imgAttach.imgCenter,
+.externalImage.imgCenter {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+.imgContainer {
+  margin: 10px 0;
+  div.imgAttach {
+    border: 1px solid silver;
+    display: inline-block;
+    padding: 2px;
+  }
+}
+.imgAttach {
+  max-height: @image-max-height;
+  max-width: @image-max-width;
+  .caption {
+    font-size: inherit;
+    padding: 3px;
+    text-align: center;
+  }
+  div {
+    span {
+      display: none;
+    }
+    div {
+      span {
+        color: @image-info-color;
+        font-size: 0.7rem;
+      }
+    }
+    &:hover {
+      div {
+        span {
+          display: inline;
+        }
+      }
+    }
+  }
+  img {
+    max-width: @image-max-width;
+  }
+}
+
+.externalImage {
+  display: inline-block;
+  max-height: @image-max-height;
+  max-width: @image-max-width;
+  img {
+    max-width: @image-max-width;
+  }
+  div {
+    div {
+      a {
+        span {
+          color: @image-info-color;
+          font-size: 0.7rem;
+        }
+      }
+    }
+    &:hover {
+      div {
+        a {
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+    div.info {
+      background: rgba(40, 40, 40, 0.59);
+      bottom: 0;
+      color: @image-info-color;
+      display: none;
+      margin: 0 2px 2px 2px;
+      overflow-x: hidden;
+      padding: 0 5px;
+      position: absolute;
+    }
+    div.wrapper {
+      background: none;
+      position: inherit;
+    }
+  }
+}
+
+.externalImage>div,
+.imgAttach>div {
+  display: table;
+  position:relative;
+  a {
+    color: @image-reference-link !important;
+  }
+}
+
+.imgContainer.imgCenter>div,
+.imgAttach.imgCenter>div,
+.externalImage.imgCenter>div {
+  display: block;
+}
+
+.imgAttach {
+  display: inline-block;
+  div {
+    div.info {
+      background: rgba(40, 40, 40, 0.59);
+      bottom: 0;
+      color: @image-info-color;
+      display: none;
+      margin: 0 2px 2px 2px;
+      overflow-x: hidden;
+      padding: 0 5px;
+      position: absolute;
+    }
+    div.wrapper {
+      background: none;
+      position: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+  .imgContainer.imgCenter,
+  .imgAttach.imgCenter,
+  .externalImage.imgCenter {
+    display: inline-block;
+  }
+
+  .imgAttach {
+    display: block;
+    div {
+      display: table;
+      margin: 0 auto;
+      div {
+        display: table;
+      }
+      div.info {
+        display: block;
+      }
+    }
+  }
+  .externalImage {
+    display: block;
+    div {
+      display: table;
+      margin: 0 auto;
+      div {
+        display: table;
+        a {
+          display: block;
+          span {
+            display: inline;
+          }
+        }
+      }
+      div.info {
+        display: block;
+        a {
+          display: inline;
+        }
+      }
+    }
+    a {
+      display: inline;
+      text-align: center;
+    }
+  }
+
+  .imgContainer.imgCenter>div,
+  .imgAttach.imgCenter>div,
+  .externalImage.imgCenter>div {
+    display: table;
+  }
+
+  a.externalLink {
+    img {
+      display: inline;
+    }
+  }
+
+}
+
+// vim:et:sts=4:sw=4:

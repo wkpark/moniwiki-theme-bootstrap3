@@ -1,0 +1,86 @@
+@diff-added-bgcolor: #eaffea;
+@diff-added-color: #a6f3a6;
+
+/* diff */
+div.diff-added,
+tr.diff-added {
+  background-color:@diff-added-bgcolor;
+}
+
+div.diff-removed,
+tr.diff-removed {
+  background-color:#FFDDDD;
+}
+
+del.diff-removed {
+  color: #999999;
+  background-color:white;
+  text-decoration:line-through;
+  border-radius: 0.2em;
+}
+
+ins.diff-added {
+  background-color:@diff-added-color;
+  text-decoration:none;
+  border-radius: 0.2em;
+}
+
+.simpleDiff,
+.fancyDiff {
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+}
+
+.fancyDiffInline del.diff-removed {
+  color: #000000;
+  background-color:#ffb0b0;
+  text-decoration:none;
+}
+
+.fancyDiffInline ins.diff-added {
+  color: #000000;
+  background-color:#8eff8e;
+  text-decoration:none;
+}
+
+.diff-sep {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  text-shadow: 0 1px 0 #fff;
+  padding: 5px 10px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #d8d8d8;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.diff-highlight {
+  padding: 0 10px;
+}
+
+/* diffstat */
+span.diff-added {
+  background-color:#1CE617;
+}
+
+span.diff-removed {
+  background-color: #FF0000;
+}
+
+span.diff-added {
+  text-shadow: 1px 1px 2px #fff;
+  background-image: linear-gradient(#1CE617, #16DC16);
+  border-radius: 2px;
+  margin-right: 2px;
+  height: 18px;
+  white-space: nowrap;
+}
+
+span.diff-removed {
+  color: yellow;
+  text-shadow: 1px 1px 2px #ff8080;
+  background-image: linear-gradient(#ff0000, #c00000);
+  border-radius: 2px;
+  height: 18px;
+  white-space: nowrap;
+}
