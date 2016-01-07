@@ -304,9 +304,14 @@ HEADER;
   <?php echo $navbar_header;?>
   <?php echo $navbar_bra;?>
 <?php
+
 // action_menu
-$mnu = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="tools">'._("Tools").'</span><span class="caret"></span></a>'."\n";
-$mnu.= str_replace('<ul>', '<ul class="dropdown-menu">', $action_menu);
+if (!empty($action_menu)) {
+  $mnu = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="tools">'._("Tools").'</span><span class="caret"></span></a>'."\n";
+  $mnu.= str_replace('<ul>', '<ul class="dropdown-menu">', $action_menu);
+} else {
+  $mnu = '';
+}
 // append action_menu
 $tmp = str_replace('<div id="wikiMenu"><ul>', '<ul class="nav navbar-nav">', $menu);
 echo str_replace('</ul>', $mnu.'</ul>', $tmp);
