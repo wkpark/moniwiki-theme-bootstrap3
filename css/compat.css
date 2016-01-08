@@ -537,6 +537,12 @@ div.wikiPre b {
   opacity:1.0;
 }
 
+/* override bootstrap */
+.externalImage div img,
+.imgAttach div img {
+  vertical-align: baseline;
+}
+
 /* object */
 .externalObject { display: inline-block; }
 .externalObject div { text-align: center; }
