@@ -62,6 +62,8 @@ $fullsearch = !empty($self->_fullsearch) ? $self->_fullsearch : 'fullsearch';
 
 // save is_show
 $self->_is_show = $is_show;
+// navbar style
+$navbar_style = !empty($self->_navbar_style) ? 'navbar-'.$self->_navbar_style : 'navbar-default';
 
 if ($self->_no_urlicons == 1)
   echo <<<EOF
@@ -287,8 +289,10 @@ HEADER;
   $navbar_bra='<div>';
   $navbar_bra='<div id="navbar" class="navbar-shrink">';
 }
+
 ?>
 <header>
+<nav class='<?php echo $navbar_style?> navbar-top navbar'>
 <div class="container">
 <form class="navbar-form navbar-right" id='go' action='' method='get' onsubmit="return moin_submit();">
    <div class="input-group">
@@ -300,7 +304,6 @@ HEADER;
       </span>
    </div>
 </form>
-<nav class='navbar-inverse navbar-top navbar'>
   <?php echo $navbar_header;?>
   <?php echo $navbar_bra;?>
 <?php
@@ -316,6 +319,7 @@ if (!empty($action_menu)) {
 $tmp = str_replace('<div id="wikiMenu"><ul>', '<ul class="nav navbar-nav">', $menu);
 echo str_replace('</ul>', $mnu.'</ul>', $tmp);
 ?>
+</div>
 </nav>
 </div>
 </header>

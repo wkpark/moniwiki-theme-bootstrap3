@@ -15,6 +15,8 @@ $_use_scrollbuttons=1; # show scroll buttons
 $_use_switch_pc=0; # show pc-mobile switcher
 $_load_jquery=0; # load jquery
 $_load_fa=0; # load font awesome
+#$_use_default_navbar=1; # use default bootstrap navbar
+#$_navbar_style='inverse';
 
 $_banners= array('moniwiki'=>array('MoniWiki', 'http://moniwiki.kldp.net'),
     'bootstrap'=>array('Bootstrap3.0', 'http://getbootstrap.com'));

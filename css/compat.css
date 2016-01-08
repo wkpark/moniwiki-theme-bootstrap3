@@ -1008,17 +1008,14 @@ div#float-footnote {
   padding-left: 15px;
 }
 
-header .container {
-  padding-right:0;
-  padding-left:0;
-}
-
 .navbar-right {
   float:none !important;
 }
 
 .navbar-form {
-  margin-right: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-left: 0;
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 0;
