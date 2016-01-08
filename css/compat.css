@@ -1000,12 +1000,22 @@ div#float-footnote {
 }
 
 .navbar-shrink .nav>li {
-  display:inline-block;
+  display:block;
+  float:left;
 }
 
 .navbar-shrink {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.navbar-shrink .navbar-nav {
+  margin: 0 -15px;
+}
+
+.navbar-shrink .navbar-nav>li>a {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar-right {
