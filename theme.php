@@ -17,6 +17,7 @@ $_use_fullsearch=0; # use fullsearch
 $_load_jquery=0; # load jquery
 $_load_fa=0; # load font awesome
 #$_use_default_navbar=1; # use default bootstrap navbar
+#$_searchform_top=1; # show searchform on top of navbar
 #$_navbar_style='inverse';
 
 #$_fullsearch='csesearch'; # custom fullsearch action (default 'fullsearch')

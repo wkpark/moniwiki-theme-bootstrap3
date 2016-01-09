@@ -192,6 +192,19 @@ aside {
 }
 
 <?php endif;?>
+
+@media (max-width: 767px) {
+nav.navbar {
+<?php
+if (!empty($self->_searchform_top))
+    echo "  border-top:0;\n";
+else
+    echo "  border-bottom:0;\n";
+?>
+  border-left:0;
+  border-right:0;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -295,21 +308,34 @@ HEADER;
 $search_text = !empty($self->_search_placeholder) ? $self->_search_placeholder : _("Search");
 $tools_text = !empty($self->_tools_menu) ? $self->_tools_menu : _("Tools");
 
+if (!empty($self->_use_fullsearch))
+    $fullsearch_btn = "<button type='submit' name='search' value='$fullsearch' class='btn btn-default'><i class=\"glyphicon glyphicon-zoom-in\"></i></button>";
+
+$searchform = <<<FORM
+<form class="navbar-form navbar-right" id='go' action='' method='get' onsubmit="return moin_submit();">
+   <div class="input-group">
+      <input type='text' name='value' size='20' accesskey='s' class='form-control' placeholder="$search_text" />
+      <input type='hidden' name='action' value='goto' />
+      <span class="input-group-btn">
+         <button type='submit' name='search' value='$mainsearch' class='btn btn-default'><i class="glyphicon glyphicon-search"></i></button>
+         $fullsearch_btn
+      </span>
+   </div>
+</form>
+FORM;
+$searchform_top = '';
+
+if (!empty($self->_searchform_top)) {
+    $searchform_top = $searchform;
+    $searchform = '';
+}
 ?>
 <header>
 <nav class='<?php echo $navbar_style?> navbar-top navbar'>
 <div class="container">
-<form class="navbar-form navbar-right" id='go' action='' method='get' onsubmit="return moin_submit();">
-   <div class="input-group">
-      <input type='text' name='value' size='20' accesskey='s' class='form-control' placeholder="<?php echo $search_text?>" />
-      <input type='hidden' name='action' value='goto' />
-      <span class="input-group-btn">
-         <button type='submit' name='search' value='<?php echo $mainsearch?>' class='btn btn-default'><i class="glyphicon glyphicon-search"></i></button>
-         <?php if (!empty($self->_use_fullsearch)):?><button type='submit' name='search' value='<?php echo $fullsearch?>' class='btn btn-default'><i class="glyphicon glyphicon-zoom-in"></i></button><?php endif;?>
-      </span>
-   </div>
-</form>
-  <?php echo $navbar_header;?>
+  <?php echo $searchform_top;?>
+  <?php echo $navbar_header?>
+  <?php if (!empty($self->_use_default_navbar)) echo $searchform;?>
   <?php echo $navbar_bra;?>
 <?php
 
@@ -323,6 +349,7 @@ if (!empty($action_menu)) {
 // append action_menu
 $tmp = str_replace('<div id="wikiMenu"><ul>', '<ul class="nav navbar-nav">', $menu);
 echo str_replace('</ul>', $mnu.'</ul>', $tmp);
+if (empty($self->_use_default_navbar)) echo $searchform;
 ?>
 </div>
 </nav>
