@@ -293,6 +293,7 @@ HEADER;
 }
 
 $search_text = !empty($self->_search_placeholder) ? $self->_search_placeholder : _("Search");
+$tools_text = !empty($self->_tools_menu) ? $self->_tools_menu : _("Tools");
 
 ?>
 <header>
@@ -314,7 +315,7 @@ $search_text = !empty($self->_search_placeholder) ? $self->_search_placeholder :
 
 // action_menu
 if (!empty($action_menu)) {
-  $mnu = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="tools">'._("Tools").'</span><span class="caret"></span></a>'."\n";
+  $mnu = '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="tools">'.$tools_text.'</span><span class="caret"></span></a>'."\n";
   $mnu.= str_replace('<ul>', '<ul class="dropdown-menu">', $action_menu);
 } else {
   $mnu = '';
