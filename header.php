@@ -57,6 +57,8 @@ if ($use_sidebar)
 $buttons = '';
 $is_show = empty($options['action']) || $options['action'] == 'show';
 
+// setup default search action
+$mainsearch = !empty($self->_mainsearch) ? $self->_mainsearch : 'titlesearch';
 // setup fullsearch action
 $fullsearch = !empty($self->_fullsearch) ? $self->_fullsearch : 'fullsearch';
 
@@ -290,17 +292,19 @@ HEADER;
   $navbar_bra='<div id="navbar" class="navbar-shrink">';
 }
 
+$search_text = !empty($self->_search_placeholder) ? $self->_search_placeholder : _("Search");
+
 ?>
 <header>
 <nav class='<?php echo $navbar_style?> navbar-top navbar'>
 <div class="container">
 <form class="navbar-form navbar-right" id='go' action='' method='get' onsubmit="return moin_submit();">
    <div class="input-group">
-      <input type='text' name='value' size='20' accesskey='s' class='form-control' placeholder="Search" />
+      <input type='text' name='value' size='20' accesskey='s' class='form-control' placeholder="<?php echo $search_text?>" />
       <input type='hidden' name='action' value='goto' />
       <span class="input-group-btn">
-         <button type='submit' name='search' value='titlesearch' class='btn btn-default'><i class="glyphicon glyphicon-search"></i></button>
-         <button type='submit' name='search' value='<?php echo $fullsearch?>' class='btn btn-default'><i class="glyphicon glyphicon-zoom-in"></i></button>
+         <button type='submit' name='search' value='<?php echo $mainsearch?>' class='btn btn-default'><i class="glyphicon glyphicon-search"></i></button>
+         <?php if (!empty($self->_use_fullsearch)):?><button type='submit' name='search' value='<?php echo $fullsearch?>' class='btn btn-default'><i class="glyphicon glyphicon-zoom-in"></i></button><?php endif;?>
       </span>
    </div>
 </form>
