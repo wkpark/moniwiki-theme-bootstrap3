@@ -1111,6 +1111,10 @@ div#mycontent {
   float: inherit;
 }
 
+#mainBody {
+  overflow: hidden;
+}
+
 aside {
   border-top:1px solid #ddd;
   float: inherit;
