@@ -1100,6 +1100,10 @@ form#go .btn {
 
 @media (max-width: 640px) {
 
+.nav>li .menu-title {
+  display:none;
+}
+
 div#mycontent {
   margin-right: 0;
 }
