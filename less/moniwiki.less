@@ -46,6 +46,7 @@
   color: @text-color;
   height:30px;
   min-width:30px;
+  text-align: center;
 }
 
 #wikiAction {
@@ -349,6 +350,17 @@ code {
 
 #wikiBody h6 {
   font-weight: bold;
+}
+
+#wikiBody ol,
+#wikiBody ul {
+  margin: 0.5rem 0;
+  padding-left: 2em;
+}
+
+#wikiBody ul>li ol,
+#wikiBody ul>li ul {
+  margin-top: 0;
 }
 
 .wikiTitle a {
