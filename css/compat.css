@@ -90,6 +90,10 @@ html {
   height: 50px;
 }
 
+.navbar {
+  margin-bottom:0;
+}
+
 /* search form */
 #go .btn {
   padding-left:6px;
@@ -99,22 +103,32 @@ html {
 /* sidebar */
 div#mycontent {
   margin-top: 15px;
-  margin-right: 240px;
 }
 
 .main-wrapper {
-  margin-right: -240px;
   width: 100%;
   height: 100%;
   float: left;
 }
 
 aside {
-  margin: 0.5rem;
-  margin-left: 0.5rem;
   float: right;
-  width: 220px;
+  margin: 0.5rem 0 0.5rem 0;
   height: 100%;
+}
+
+/* sidebar width */
+div#mycontent {
+  margin-right: 270px;
+}
+
+.main-wrapper {
+  margin-right: -270px;
+}
+
+aside {
+  margin-left: 20px;
+  width: 250px;
 }
 
 /* begin */
@@ -1025,7 +1039,53 @@ div#float-footnote {
 
 }
 
+@media (max-width: 991px) {
+div#mycontent {
+  margin-right: 0;
+}
+
+.main-wrapper {
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+  float: inherit;
+}
+
+aside {
+  border-top:1px solid #ddd;
+  margin-left: 0;
+  float: inherit;
+  width: 100%;
+}
+
+.rssChanges h3 {
+  margin-top: 10px;
+}
+
+.rssChanges {
+  float: left;
+  width: 250px;
+}
+
+}
+
 @media (max-width: 767px) {
+.rssChanges {
+  float: inherit;
+  width: 100%;
+}
+
+aside {
+  margin: 0;
+}
+
+.rssChanges ul li {
+  padding: 5px;
+}
+
+.rssChanges {
+  margin-top: 2.0em;
+}
 
 #go .btn {
   padding-left:12px;
@@ -1108,38 +1168,8 @@ form#go .btn {
   display:none;
 }
 
-div#mycontent {
-  margin-right: 0;
-}
-
-.main-wrapper {
-  margin-right: 0;
-  width: 100%;
-  height: 100%;
-  float: inherit;
-}
-
 #mainBody {
   overflow: hidden;
-}
-
-aside {
-  border-top:1px solid #ddd;
-  float: inherit;
-  width: 100%;
-  margin: 0;
-}
-
-.rssChanges h3 {
-  margin-top: 10px;
-}
-
-.rssChanges ul li {
-  padding: 5px;
-}
-
-.rssChanges {
-  margin-top: 2.0em;
 }
 
 /* external images */
