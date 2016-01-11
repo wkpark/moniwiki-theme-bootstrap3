@@ -47,7 +47,7 @@ foreach ($self->_rss_sites as $v) {
 echo '<div class="rssChanges">';
 echo '<p class="more"><a href="'.$v['link'].'" class="more button-small">'."<span lang='en' title='more...' class='i18n'>more...</span></a></p>","\n";
 echo '<h3>',(isset($v['icon']) ? $v['icon'] : ''),' <a href="',$v['link'],'">',$v['title'],'</a></h3>',"\n";
-echo $self->macro_repl('RSS', "[H:i],".(isset($v['item']) ? $v['item'] : 20).','.$v['url'], array('call'=>1));
+echo $self->macro_repl('RSS', "[H:i],".(isset($v['width']) ? $v['width'] : 40).','.$v['url'], array('call'=>1));
 echo '</div>',"\n";
 }
 endif;
