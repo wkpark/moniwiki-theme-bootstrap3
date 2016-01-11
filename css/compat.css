@@ -94,6 +94,10 @@ html {
   margin-bottom:0;
 }
 
+.nav a.interwiki {
+  display:none;
+}
+
 /* search form */
 #go .btn {
   padding-left:6px;
