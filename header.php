@@ -19,7 +19,9 @@ if ($self->_load_fa)
 echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/bootstrap.min.css" />',"\n";
 echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/compat.css" />',"\n";
 echo $self->css_html;
-//echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/dark.css" />',"\n";
+
+if (!empty($self->_css_theme))
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_css_theme.'" />',"\n";
 
 if (file_exists(dirname(__FILE__).'/css/local.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css" />',"\n";
