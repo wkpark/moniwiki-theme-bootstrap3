@@ -13,6 +13,10 @@ code {
   border-bottom:1px solid @gray-light; /* */
 }
 
+#wikiFooter {
+  border-top: 1px solid @border-color;
+}
+
 .wikiTitle a {
   color: @text-color;
 }
@@ -95,8 +99,9 @@ table.wiki {
 }
 
 blockquote.quote {
-  color: #000000;
+  color: @text-color;
   border-left: 4px solid #A4BCCC;
+  background-color: @quote-bg;
 
   &:before {
     color: #879EAD;
