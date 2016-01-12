@@ -101,6 +101,7 @@
 .imgAttach > div {
   display: table;
   position: relative;
+  z-index: 10;
 }
 .externalImage > div a,
 .imgAttach > div a {
