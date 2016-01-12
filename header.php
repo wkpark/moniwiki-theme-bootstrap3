@@ -26,6 +26,9 @@ if (!empty($self->_css_theme))
 if (file_exists(dirname(__FILE__).'/css/local.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css" />',"\n";
 
+if (!empty($self->_theme_color))
+    echo '<meta name="theme-color" content="'.$self->_theme_color.'" />',"\n";
+
 if (function_exists('local_check_mobile')) {
     $is_mobile = local_check_mobile();
 } else {
