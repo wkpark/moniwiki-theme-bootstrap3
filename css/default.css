@@ -396,10 +396,10 @@ table.center {
 table.center td {
   padding: 4px;
 }
-table.center td .center {
+table.center td.center {
   text-align: center;
 }
-table.center td .right {
+table.center td.right {
   text-align: right;
 }
 table.right {
@@ -410,10 +410,10 @@ table.right {
 table.right td {
   padding: 4px;
 }
-table.right td .center {
+table.right td.center {
   text-align: center;
 }
-table.right td .right {
+table.right td.right {
   text-align: right;
 }
 /* messages */
@@ -734,34 +734,34 @@ blockquote.quote:before {
   padding: 0.5em;
   border-top: 1px solid #eff0ed;
 }
-.recentChanges td .author {
+.recentChanges td.author {
   width: 8%;
   text-align: center;
 }
-.recentChanges td .date {
+.recentChanges td.date {
   width: 150px;
   white-space: nowrap;
 }
-.recentChanges td .change {
+.recentChanges td.change {
   width: 20%;
   text-align: center;
 }
-.recentChanges td .check {
+.recentChanges td.check {
   width: 20%;
 }
 .recentChanges th {
   padding: 0.5em;
   background-image: linear-gradient(#fafafa, #f5f5f5);
 }
-.recentChanges th .rev {
+.recentChanges th.rev {
   width: 10%;
   text-align: center;
 }
-.recentChanges .hits,
+.recentChanges.hits,
 .recentChanges td.editinfo {
   text-align: right;
 }
-.recentChanges .user,
+.recentChanges.user,
 .recentChanges td.editinfo {
   font-family: Trebuchet MS, Tahoma, Lucida, sans-serif;
 }
