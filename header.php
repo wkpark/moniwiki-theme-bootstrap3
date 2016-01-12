@@ -26,6 +26,10 @@ if (!empty($self->_css_theme))
 if (file_exists(dirname(__FILE__).'/css/local.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css" />',"\n";
 
+// custom css support
+if (!empty($self->_custom_css))
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_custom_css.'" />',"\n";
+
 // navbar style
 $navbar_style = !empty($self->_navbar_style) ? 'navbar-'.$self->_navbar_style : 'navbar-default';
 
