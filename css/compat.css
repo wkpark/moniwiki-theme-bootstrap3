@@ -90,6 +90,14 @@ html {
   height: 50px;
 }
 
+.navbar-padding {
+  height:50px;
+}
+
+.navbar-fixed-top {
+  top:inherit;
+}
+
 .navbar {
   margin-bottom:0;
 }
@@ -1149,6 +1157,10 @@ aside {
 .navbar-form .form-control {
   border-radius: 0;
   display: table-cell;
+}
+
+.navbar-padding {
+  height:84px;
 }
 
 form#go .btn {

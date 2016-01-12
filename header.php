@@ -26,6 +26,12 @@ if (!empty($self->_css_theme))
 if (file_exists(dirname(__FILE__).'/css/local.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css" />',"\n";
 
+// navbar style
+$navbar_style = !empty($self->_navbar_style) ? 'navbar-'.$self->_navbar_style : 'navbar-default';
+
+if (!empty($self->_navbar_style) && file_exists(dirname(__FILE__).'/css/'.$navbar_style.'.css'))
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$navbar_style.'.css" />',"\n";
+
 if (!empty($self->_theme_color))
     echo '<meta name="theme-color" content="'.$self->_theme_color.'" />',"\n";
 
@@ -72,8 +78,9 @@ $rss_icon = !empty($self->_no_rss_icon) ? '' : $rss_icon;
 
 // save is_show
 $self->_is_show = $is_show;
-// navbar style
-$navbar_style = !empty($self->_navbar_style) ? 'navbar-'.$self->_navbar_style : 'navbar-default';
+
+// navbar-fixed-top
+$navbar_style .= !empty($self->_navbar_fixed_top) ? ' navbar-fixed-top' : '';
 
 if ($self->_no_urlicons == 1)
   echo <<<EOF
@@ -217,6 +224,18 @@ else
 
 <script type="text/javascript">
 $(function() {
+
+<?php if (!empty($self->_use_navbar_opacity)):?>
+$(document).on('scroll', function (e) {
+    var navbar = $('.navbar-fixed-top');
+    if (navbar) {
+        var trans = $(document).scrollTop() / 500;
+        var opacity = trans > 0.4 ? 0.6 : 1 - trans;
+        navbar.css('opacity', opacity);
+    }
+});
+<?php endif;?>
+
 $('#scrap').draggable();
 var logout_url = "<?php echo $logout_url;?>";
 var login_url = "<?php echo $login_url;?>";
@@ -364,6 +383,12 @@ if (empty($self->_use_default_navbar)) echo $searchform;
 </div>
 </header>
 <?php
+// hard padding navbar height for fixed-top style.
+if (!empty($self->_navbar_fixed_top)) {
+    $height = !empty($self->_navbar_height) ? $self->_navbar_height : '50px';
+    echo '<div class="navbar-padding"></div>',"\n";
+}
+
 if ($bannerFlag) {
     // show banner flag
     if (function_exists('local_top_banner'))

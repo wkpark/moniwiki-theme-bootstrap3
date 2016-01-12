@@ -19,6 +19,8 @@ $_load_fa=0; # load font awesome
 #$_use_default_navbar=1; # use default bootstrap navbar
 #$_searchform_top=1; # show searchform on top of navbar
 #$_navbar_style='inverse';
+#$_navbar_fixed_top=0; # enable navbar-fixed-top
+#$_use_navbar_opacity=0; # set fixed navbar transparency on scroll
 
 #$_fullsearch='csesearch'; # custom fullsearch action (default 'fullsearch')
 #$_search_placeholder='Search...'; # search form placeholder
