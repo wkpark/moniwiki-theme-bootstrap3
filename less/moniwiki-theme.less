@@ -195,7 +195,39 @@ a.switch-to-pc {
   }
 }
 
+/* diffstat */
 span.diff-added {
   color:#000;
 }
 
+/* diff */
+div.diff-added,
+tr.diff-added {
+  background-color:@diff-added-bgcolor;
+}
+
+div.diff-removed,
+tr.diff-removed {
+  background-color:@diff-removed-bgcolor;
+}
+
+del.diff-removed {
+  color: @diff-removed-text-color;
+  background-color:@diff-removed-color;
+}
+
+ins.diff-added {
+  background-color:@diff-added-color;
+  color:@diff-added-text-color;
+}
+
+.simpleDiff,
+.fancyDiff {
+  border: 1px solid @table-border-color;
+}
+
+.diff-sep {
+  background-color: @table-bg-accent;
+  border-bottom: 1px solid @table-border-color;
+  color: @text-color;
+}

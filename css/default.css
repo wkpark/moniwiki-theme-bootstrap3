@@ -190,11 +190,11 @@ tr.diff-added {
 }
 div.diff-removed,
 tr.diff-removed {
-  background-color: #FFDDDD;
+  background-color: #ffdddd;
 }
 del.diff-removed {
   color: #999999;
-  background-color: white;
+  background-color: #ffffff;
   text-decoration: line-through;
   border-radius: 0.2em;
 }
@@ -202,10 +202,11 @@ ins.diff-added {
   background-color: #a6f3a6;
   text-decoration: none;
   border-radius: 0.2em;
+  color: #333333;
 }
 .simpleDiff,
 .fancyDiff {
-  border: 1px solid #d8d8d8;
+  border: 1px solid #dddddd;
   border-radius: 2px;
 }
 .fancyDiffInline del.diff-removed {
@@ -221,10 +222,10 @@ ins.diff-added {
 .diff-sep {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 14px;
-  text-shadow: 0 1px 0 #fff;
   padding: 5px 10px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #d8d8d8;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #dddddd;
+  color: #333333;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }

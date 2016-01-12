@@ -32,6 +32,9 @@ a:focus {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+hr {
+  border-top: 1px solid #222222;
+}
 .list-group-item {
   border-color: #474747;
   background-color: transparent;
@@ -226,6 +229,33 @@ a.switch-to-pc {
 a.switch-to-pc:hover {
   color: #eaeaea;
 }
+/* diffstat */
 span.diff-added {
   color: #000;
+}
+/* diff */
+div.diff-added,
+tr.diff-added {
+  background-color: #676f67;
+}
+div.diff-removed,
+tr.diff-removed {
+  background-color: #a28c8c;
+}
+del.diff-removed {
+  color: #504d4d;
+  background-color: #dddddd;
+}
+ins.diff-added {
+  background-color: #88b388;
+  color: #575757;
+}
+.simpleDiff,
+.fancyDiff {
+  border: 1px solid #474444;
+}
+.diff-sep {
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #474444;
+  color: #c8cfc4;
 }
