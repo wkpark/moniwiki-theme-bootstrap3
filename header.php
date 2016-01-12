@@ -408,6 +408,9 @@ if (!empty($msg)) {
 }
 ?>
 <!-- ?php echo '<div id="wikiTrailer"><p><span>'.$trail.'</span></p></div>';? -->
+<?php if (function_exists('local_notice'))
+    echo local_notice($self, $options);
+?>
 <div class="main-wrapper">
 
 <div id='mycontent' class='hentry'>
