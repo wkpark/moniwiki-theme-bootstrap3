@@ -310,17 +310,6 @@ img.wikiIcon {
   height:18px;
 }
 
-#wikiFooter {
-  padding-top: 1em;
-  padding-bottom: 50px;
-  margin-top: 3em; /* */
-  /* color: #99979c; /* */
-  color: #656565; /* */
-  /* background-color: #2a2730; /* */
-  border-top: 1px solid #e5e5e5;
-  border-bottom:0;
-}
-
 .lastmodified { text-align:center; }
 .lastmodified ins { text-decoration: none; font-size:0.9rem; color:#989494; }
 

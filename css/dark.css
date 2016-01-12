@@ -47,6 +47,9 @@ code {
   border-bottom: 1px solid #555555;
   /* */
 }
+#wikiFooter {
+  border-top: 1px solid #555555;
+}
 .wikiTitle a {
   color: #c8cfc4;
 }
@@ -156,8 +159,9 @@ table.wiki {
   /* #F8F7F0 */
 }
 blockquote.quote {
-  color: #000000;
+  color: #c8cfc4;
   border-left: 4px solid #A4BCCC;
+  background-color: #222222;
 }
 blockquote.quote:before {
   color: #879EAD;
