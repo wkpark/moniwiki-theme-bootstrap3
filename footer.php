@@ -76,7 +76,7 @@ if (function_exists('local_get_footer'))
 
 foreach ($self->_banners as $k=>$v) {
     $name = $v[0];
-    $site = $v[0];
+    $site = $v[1];
     $banner .= <<<FOOT
  <a href="$site"><img
   src="$self->themeurl/images/$k-thin.png"
