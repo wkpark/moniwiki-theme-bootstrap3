@@ -64,6 +64,9 @@ $mainsearch = !empty($self->_mainsearch) ? $self->_mainsearch : 'titlesearch';
 // setup fullsearch action
 $fullsearch = !empty($self->_fullsearch) ? $self->_fullsearch : 'fullsearch';
 
+// check rss icon
+$rss_icon = !empty($self->_no_rss_icon) ? '' : $rss_icon;
+
 // save is_show
 $self->_is_show = $is_show;
 // navbar style
@@ -383,7 +386,7 @@ if (!empty($msg)) {
 <div id='wikiIcon'>
 <?php
 #$icons = str_replace('/a> <a', '/a><a', trim($icons)); // remove spaces
-echo str_replace('/a> <a', '/a><a', trim($upper_icon).$icons);?>
+echo str_replace('/a> <a', '/a><a', trim($upper_icon).$icons.$rss_icon);?>
 </div>
 
 <div class="btn-group">
