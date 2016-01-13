@@ -64,9 +64,6 @@ code {
   color: #489a48;
   text-decoration: underline;
 }
-#wikiBody del a.externalLink {
-  color: #809880;
-}
 #wikiBody a.nonexistent {
   color: #92645b;
 }
@@ -81,6 +78,9 @@ code {
 }
 #wikiBody del a.nonexistent {
   color: #cc6161;
+}
+#wikiBody del a.externalLink {
+  color: #809880;
 }
 #wikiAction a {
   color: #c8cfc4;

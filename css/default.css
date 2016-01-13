@@ -267,9 +267,6 @@ span.diff-removed {
   color: #489a48;
   text-decoration: underline;
 }
-#wikiBody del a.externalLink {
-  color: #809880;
-}
 #wikiBody a.nonexistent {
   color: #7B2B2B;
 }
@@ -284,6 +281,9 @@ span.diff-removed {
 }
 #wikiBody del a.nonexistent {
   color: #cc6161;
+}
+#wikiBody del a.externalLink {
+  color: #809880;
 }
 #wikiFooter {
   padding-top: 1em;
