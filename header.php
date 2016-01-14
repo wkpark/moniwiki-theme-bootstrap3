@@ -452,33 +452,8 @@ if ($is_show and !empty($lastedit) and !empty($self->_use_lastmod)):
     echo "</p>";
     echo $buttons;
 endif;
-?>
-<div class='clearfix'></div>
-<?php
-if (empty($options['action']) and !empty($DBInfo->use_scrap)) {
-  $scrap = $self->macro_repl('Scrap', 'js');
-  if (!empty($scrap)) {
-    echo "<div id='scrap'>";
-    echo $scrap;
-    echo "</div>";
-    $js = $self->get_javascripts();
-    if ($js) {
-      echo $js;
-    }
-  }
-}
 
-if (empty($options['action']) and !empty($DBInfo->use_discuss)) {
-  $discuss = $self->macro_repl('Discuss', 'js');
-  if (!empty($discuss)) {
-    echo "<div id='discuss'>";
-    echo $discuss;
-    echo "</div>";
-    $js = $self->get_javascripts();
-    if ($js) {
-      echo $js;
-    }
-    echo "<div id='discuss-links'>";
-    echo "</div>";
-  }
-}
+if (function_exists('local_misc'))
+    echo local_misc($self, $options);
+else
+    echo "<div class='clearfix'></div>\n";
