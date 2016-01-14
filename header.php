@@ -438,9 +438,16 @@ if ($is_show and !empty($lastedit) and !empty($self->_use_lastmod)):
         "<span class='i18n' lang='ko' title='last modified:'>"._("last modified:")."</span> <span class='updated'><span class='value-title' title='$datetime'>$lastedit $lasttime</span></span>";
     if ($self->_use_contributors) {
         $url = $self->link_url($self->page->urlname, '?action=contributors');
-        echo ' ', sprintf(_("by %s"),
-            "<span class='editors'><span class='vcard'><a class='fn nickname url' href='".$url."'>".
-            "<span class='i18n' lang='ko' title='Contributors'>"._("Contributors")."</span></a></span></span>");
+        $cls = '';
+        // check source site
+        if ($self->source_site) {
+            $url = $self->source_site.$url;
+            $cls = ' externalLink source';
+        }
+        $contributors = !empty($self->_contributors_text) ? $self->_contributors_text : _("Contributors");
+        echo ' ',
+            "<span class='editors'><span class='vcard'><a class='fn nickname url$cls' href='".$url."'>".
+            "<span class='i18n' lang='ko' title='Contributors'>".$contributors."</span></a></span></span>";
     }
     echo "</p>";
     echo $buttons;
