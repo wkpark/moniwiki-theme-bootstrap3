@@ -85,24 +85,17 @@ foreach ($self->_banners as $k=>$v) {
 FOOT;
 }
 
+$self->_banner = $banner;
+// call local_banners()
+if (function_exists('local_banners'))
+    local_banners($self, $options);
 ?>
 <?php
-if (!empty($banner)) {
-    echo '<div style="text-align:center" id="wikiBanner">'.$banner;
-    if (!empty($self->_amungus_id)) {
-        $wauid = $self->_amungus_id;
-        echo <<<AMUNGUS
- <script id="_wau{$wauid[1]}">var _wau = _wau || []; _wau.push(["small", "{$wauid[0]}", "{$wauid[1]}"]);
-(function() {var s=document.createElement("script"); s.async=true;
-s.src="http://widgets.amung.us/small.js";
-document.getElementsByTagName("head")[0].appendChild(s);
-})();</script>
-AMUNGUS;
-    }
+
+if (!empty($self->_banner)) {
+    echo '<div style="text-align:center" id="wikiBanner">'.$self->_banner;
     echo '</div>';
 }
-if (!empty($self->_snippet))
-    echo $self->_snippet;
 if (!empty($lastedit)) {
     echo '<div class="lastmodified">';
     echo "<ins><span class='i18n' lang='ko' title='last modified:'>"._("last modified:")."</span> $lastedit $lasttime</ins>";
