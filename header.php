@@ -10,31 +10,34 @@
  * @license MIT/GPLv2
  */
 
+// FIXME
+$stamp = filemtime(__FILE__);
+
 echo $self->header_html;
 if ($self->_load_jquery)
     echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>',"\n";
 echo '<script src="'.$self->themeurl.'/js/bootstrap.min.js"></script>',"\n";
 if ($self->_load_fa)
-    echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>';
-echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/bootstrap.min.css" />',"\n";
-echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/compat.css" />',"\n";
+    echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?'.$stamp.'"/>';
+echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/bootstrap.min.css?'.$stamp.'" />',"\n";
+echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/compat.css?'.$stamp.'" />',"\n";
 echo $self->css_html;
 
 if (!empty($self->_css_theme))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_css_theme.'" />',"\n";
 
 if (file_exists(dirname(__FILE__).'/css/local.css'))
-    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css" />',"\n";
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css?'.$stamp.'" />',"\n";
 
 // navbar style
 $navbar_style = !empty($self->_navbar_style) ? 'navbar-'.$self->_navbar_style : 'navbar-default';
 
 if (!empty($self->_navbar_style) && file_exists(dirname(__FILE__).'/css/'.$navbar_style.'.css'))
-    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$navbar_style.'.css" />',"\n";
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$navbar_style.'.css?'.$stamp.'" />',"\n";
 
 // custom css support
 if (!empty($self->_custom_css))
-    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_custom_css.'" />',"\n";
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_custom_css.'?'.$stamp.'" />',"\n";
 
 // navbar custom
 if (!empty($self->_navbar_custom))
