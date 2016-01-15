@@ -1157,6 +1157,11 @@ aside {
 .navbar-form .form-control {
   border-radius: 0;
   display: table-cell;
+  height:36px;
+}
+
+.navbar-form .btn {
+  padding: 7px 12px;
 }
 
 .navbar-padding {
