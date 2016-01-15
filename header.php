@@ -26,15 +26,19 @@ if (!empty($self->_css_theme))
 if (file_exists(dirname(__FILE__).'/css/local.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css" />',"\n";
 
-// custom css support
-if (!empty($self->_custom_css))
-    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_custom_css.'" />',"\n";
-
 // navbar style
 $navbar_style = !empty($self->_navbar_style) ? 'navbar-'.$self->_navbar_style : 'navbar-default';
 
 if (!empty($self->_navbar_style) && file_exists(dirname(__FILE__).'/css/'.$navbar_style.'.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$navbar_style.'.css" />',"\n";
+
+// custom css support
+if (!empty($self->_custom_css))
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_custom_css.'" />',"\n";
+
+// navbar custom
+if (!empty($self->_navbar_custom))
+    $navbar_style .= ' navbar-custom';
 
 if (!empty($self->_theme_color))
     echo '<meta name="theme-color" content="'.$self->_theme_color.'" />',"\n";
