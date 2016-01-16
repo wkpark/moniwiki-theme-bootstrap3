@@ -1,0 +1,124 @@
+/* icons */
+
+#wikiIcon>a>span {
+  display:inline-block;
+}
+
+.moni-icon {
+  display:inline-block;
+  width:20px;
+  height:20px;
+  margin:4px 5px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.moni-edit {
+  background-image: url(edit.png);
+  background-image: linear-gradient(transparent, transparent), url(edit.svg);
+}
+
+.moni-upper {
+  background-image: url(upper.png);
+  background-image: linear-gradient(transparent, transparent), url(upper.svg);
+}
+
+.moni-main {
+  background-image: url(main.png);
+  background-image: linear-gradient(transparent, transparent), url(main.svg);
+}
+
+.moni-create {
+  background-image: url(create.png);
+  background-image: linear-gradient(transparent, transparent), url(create.svg);
+}
+
+.moni-rss {
+  background-image: url(rss.png);
+  background-image: linear-gradient(transparent, transparent), url(rss.svg);
+}
+
+.moni-random {
+  background-image: url(random.png);
+  background-image: linear-gradient(transparent, transparent), url(random.svg);
+}
+
+.moni-search {
+  background-image: url(search.png);
+  background-image: linear-gradient(transparent, transparent), url(search.svg);
+}
+
+.moni-info {
+  background-image: url(info.png);
+  background-image: linear-gradient(transparent, transparent), url(info.svg);
+}
+
+.moni-help {
+  background-image: url(help.png);
+  background-image: linear-gradient(transparent, transparent), url(help.svg);
+}
+
+.moni-scrap {
+  background-image: url(scrap.png);
+  background-image: linear-gradient(transparent, transparent), url(scrap.svg);
+}
+
+.moni-unscrap {
+  background-image: url(unscrap.png);
+  background-image: linear-gradient(transparent, transparent), url(unscrap.svg);
+}
+
+.moni-locked {
+  background-image: url(locked.png);
+  background-image: linear-gradient(transparent, transparent), url(locked.svg);
+}
+
+.moni-backlinks {
+  background-image: url(backlinks.png);
+  background-image: linear-gradient(transparent, transparent), url(backlinks.svg);
+}
+
+.moni-show {
+  background-image: url(show.png);
+  background-image: linear-gradient(transparent, transparent), url(show.svg);
+}
+
+.moni-pref {
+  background-image: url(pref.png);
+  background-image: linear-gradient(transparent, transparent), url(pref.svg);
+}
+
+.moni-attach {
+  background-image: url(attach.png);
+  background-image: linear-gradient(transparent, transparent), url(attach.svg);
+}
+
+.moni-del {
+  background-image: url(deleted.png);
+  background-image: linear-gradient(transparent, transparent), url(deleted.svg);
+}
+
+.moni-print {
+  background-image: url(print.png);
+  background-image: linear-gradient(transparent, transparent), url(print.svg);
+}
+
+.moni-mailto {
+  background-image: url(email.png);
+  background-image: linear-gradient(transparent, transparent), url(email.svg);
+}
+
+.moni-external {
+  background-image: url(external.png);
+  background-image: linear-gradient(transparent, transparent), url(external.svg);
+}
+
+.moni-www {
+  background-image: url(www.png);
+  background-image: linear-gradient(transparent, transparent), url(www.svg);
+}
+
+.moni-diff {
+  background-image: url(diff.png);
+  background-image: linear-gradient(transparent, transparent), url(diff.svg);
+}

@@ -26,6 +26,9 @@ echo $self->css_html;
 if (!empty($self->_css_theme))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_css_theme.'" />',"\n";
 
+if (!empty($self->_icon_theme))
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/images/'.$self->_icon_theme.'/icon.css?'.$stamp.'" />',"\n";
+
 if (file_exists(dirname(__FILE__).'/css/local.css'))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/local.css?'.$stamp.'" />',"\n";
 

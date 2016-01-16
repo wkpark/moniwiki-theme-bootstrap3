@@ -1,0 +1,102 @@
+/* icons */
+
+#wikiIcon>a>span {
+  display:inline-block;
+}
+
+.moni-icon {
+  display:inline-block;
+  width:20px;
+  height:20px;
+  margin:4px 5px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.moni-edit {
+  background-image: url(edit.png);
+}
+
+.moni-upper {
+  background-image: url(upper.png);
+}
+
+.moni-main {
+  background-image: url(main.png);
+}
+
+.moni-create {
+  background-image: url(create.png);
+}
+
+.moni-rss {
+  background-image: url(rss.png);
+}
+
+.moni-random {
+  background-image: url(random.png);
+}
+
+.moni-search {
+  background-image: url(search.png);
+}
+
+.moni-info {
+  background-image: url(info.png);
+}
+
+.moni-help {
+  background-image: url(help.png);
+}
+
+.moni-scrap {
+  background-image: url(scrap.png);
+}
+
+.moni-unscrap {
+  background-image: url(unscrap.png);
+}
+
+.moni-locked {
+  background-image: url(locked.png);
+}
+
+.moni-backlinks {
+  background-image: url(backlinks.png);
+}
+
+.moni-show {
+  background-image: url(show.png);
+}
+
+.moni-pref {
+  background-image: url(pref.png);
+}
+
+.moni-attach {
+  background-image: url(attach.png);
+}
+
+.moni-del {
+  background-image: url(deleted.png);
+}
+
+.moni-print {
+  background-image: url(print.png);
+}
+
+.moni-mailto {
+  background-image: url(email.png);
+}
+
+.moni-external {
+  background-image: url(external.png);
+}
+
+.moni-www {
+  background-image: url(www.png);
+}
+
+.moni-diff {
+  background-image: url(diff.png);
+}
