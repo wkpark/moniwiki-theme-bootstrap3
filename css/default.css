@@ -943,6 +943,8 @@ a.switch-to-pc:hover {
   }
   table.wiki tbody {
     display: table;
+  }
+  table.wiki.center tbody {
     margin-left: auto;
     margin-right: auto;
   }
