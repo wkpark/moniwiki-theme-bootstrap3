@@ -891,6 +891,7 @@ code {
   width: 78%;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 .rssChanges p.more {
   float: right;
