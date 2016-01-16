@@ -1210,9 +1210,6 @@ div#float-footnote {
 
 #wikiIcon { position: static; text-align: center !important; }
 
-table.right { float:none; }
-table.wiki { display: block; width: inherit !important; /* important for overflow */}
-
 tt.foot {
   font-size:12px;
   vertical-align: baseline;

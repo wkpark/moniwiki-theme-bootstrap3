@@ -369,11 +369,11 @@ table.wiki > thead > tr > td {
 table.info tr > th,
 table.wiki tr > th {
   text-align: center;
-  padding: 4px;
+  padding: 4px 6px;
 }
 table.info tr > td,
 table.wiki tr > td {
-  padding: 4px;
+  padding: 4px 6px;
 }
 /* table */
 table.wiki {
@@ -931,4 +931,19 @@ a.switch-to-pc {
 }
 a.switch-to-pc:hover {
   color: #eaeaea;
+}
+@media screen and (max-width: 767px) {
+  table.right {
+    float: none;
+  }
+  table.wiki {
+    display: block;
+    width: inherit !important;
+    /* important for overflow */
+  }
+  table.wiki tbody {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -127,10 +127,10 @@ table.wiki {
 
   tr > th {
     text-align: center;
-    padding: 4px;
+    padding: 4px 6px;
   }
   tr > td {
-    padding: 4px;
+    padding: 4px 6px;
   }
 }
 
@@ -503,4 +503,15 @@ a.switch-to-pc {
   &:hover {
     color: #eaeaea;
   }
+}
+
+@media screen and (max-width: @screen-xs-max) {
+table.right { float:none; }
+table.wiki { display: block; width: inherit !important; /* important for overflow */}
+table.wiki tbody {
+  display:table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 }
