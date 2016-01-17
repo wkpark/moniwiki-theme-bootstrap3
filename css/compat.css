@@ -1,8 +1,8 @@
-html, body, th, td, input, select, textarea, button, div, p, h1, h2, h3, h4, h5, h6, li {
-  font-family: 'Open Sans', Helvetica, Arial, 'Apple SD Gothic Neo','Noto Sans Korean','본고딕','KoPubDotum Medium','나눔바른고딕','나눔고딕',NanumGothic,'맑은고딕','Malgun Gothic',sans-serif;
+body {
+  font-family: Helvetica, Arial, 'Apple SD Gothic Neo','나눔바른고딕','나눔고딕',NanumGothic,'맑은고딕','Malgun Gothic',sans-serif;
 }
 
-body, th, td, input, select, textarea, button, div, p, li {
+body, th, td, input, select, button, div, p, li {
   font-size: 0.9rem;
 }
 
