@@ -166,6 +166,10 @@ aside {
   border:0;
 }
 
+#wikiContent {
+  padding-left:10px;
+}
+
 #wikiContent .toctitle h2 {
   border: 0;
 }
@@ -1073,6 +1077,10 @@ aside {
 }
 
 @media (max-width: 767px) {
+#wikiContent {
+  padding-left:0;
+}
+
 .rssChanges {
   float: inherit;
   width: 100%;
