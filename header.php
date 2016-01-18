@@ -374,7 +374,12 @@ if (!empty($self->_searchform_top)) {
 <header>
 <nav class='<?php echo $navbar_style?> navbar-top navbar'>
 <div class="container">
+  <?php if (empty($self->_searchform_top) && !empty($self->_use_login_menu))
+    echo '<ul class="nav navbar-nav navbar-login"><li><a id="login-status" href="'.$login_url.'"><i class="glyphicon glyphicon-user"></i></a></li></ul>';
+  ?>
   <?php echo $searchform_top;?>
+  <?php if (!empty($self->_searchform_top) && !empty($self->_use_login_menu))
+    echo '<ul class="nav navbar-nav navbar-login"><li><a id="login-status" href="'.$login_url.'"><i class="glyphicon glyphicon-user"></i></a></li></ul>';?>
   <?php echo $navbar_header?>
   <?php if (!empty($self->_use_default_navbar)) echo $searchform;?>
   <?php echo $navbar_bra;?>
@@ -436,7 +441,9 @@ echo str_replace('/a> <a', '/a><a', trim($upper_icon).$icons.$rss_icon);?>
 
 <div class="btn-group">
 <a class="btn btn-sm btn-default" href="<?php echo $self->link_url('UserPreferences');?>"><i class="glyphicon glyphicon-cog"></i></a>
+<?php if (empty($self->_use_login_menu)):?>
 <a class="btn btn-sm btn-default" id="login-status" href="<?php echo $login_url;?>"><i class="glyphicon glyphicon-user"></i></a>
+<?php endif;?>
 </div>
 
 <?php echo '<div class="wikiTitle entry-title" id="wikiTitle">'.$title.'</div>';?>

@@ -14,6 +14,7 @@ $_use_sidebar=1; # show sidebar
 $_use_scrollbuttons=1; # show scroll buttons
 $_use_switch_pc=0; # show pc-mobile switcher
 $_use_fullsearch=0; # use fullsearch
+$_use_login_menu=0; # show login menu in the navbar
 $_load_jquery=0; # load jquery
 $_load_fa=0; # load font awesome
 #$_use_default_navbar=1; # use default bootstrap navbar

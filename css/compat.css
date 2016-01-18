@@ -109,6 +109,12 @@ em.underline {
   margin-bottom:0;
 }
 
+.navbar-login {
+  float:right;
+  margin-left:-6px;
+  margin-right:-6px;
+}
+
 .nav a.interwiki {
   display:none;
 }
@@ -1109,6 +1115,16 @@ aside {
 #go .btn {
   padding-left:12px;
   padding-right:12px;
+}
+
+.navbar-login {
+  margin:0;
+}
+
+.navbar-login li a {
+  margin:0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar-shrink .navbar-nav .open .dropdown-menu {
