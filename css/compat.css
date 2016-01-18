@@ -78,6 +78,13 @@ html {
   transform: scale(1, -1);
 }
 
+/* wiki syntax */
+/* <u></u> replacement */
+em.underline {
+  font-style:normal;
+  text-decoration:underline;
+}
+
 /* logo */
 .navbar-brand span {
   display:none;
