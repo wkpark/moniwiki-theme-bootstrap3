@@ -413,7 +413,7 @@ if ($bannerFlag) {
 ?>
 
 <div id='mainBody'>
-<div class='container'>
+<div class='container container-main'>
 <?php
 if (!empty($msg)) {
   $tmp = str_replace('<div class="message"', '<div class="alert alert-dismissable alert-info"', $msg);
