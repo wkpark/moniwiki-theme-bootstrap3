@@ -400,14 +400,15 @@ if (empty($self->_use_default_navbar)) echo $searchform;
 </div>
 </nav>
 </div>
-</header>
 <?php
 // hard padding navbar height for fixed-top style.
 if (!empty($self->_navbar_fixed_top)) {
     $height = !empty($self->_navbar_height) ? $self->_navbar_height : '50px';
     echo '<div class="navbar-padding"></div>',"\n";
 }
-
+?>
+</header>
+<?php
 if ($bannerFlag) {
     // show banner flag
     if (function_exists('local_top_banner'))
