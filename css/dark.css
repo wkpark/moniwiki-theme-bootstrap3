@@ -2,6 +2,11 @@ body {
   color: #c8cfc4;
   background-color: #111111;
 }
+
+.container-main {
+  background: #111111;
+}
+
 pre {
   color: #c8cfc4;
   background-color: #272727;
