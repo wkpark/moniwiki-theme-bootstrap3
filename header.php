@@ -24,7 +24,7 @@ echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/compat.css?'.$stamp.'
 echo $self->css_html;
 
 if (!empty($self->_css_theme))
-    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_css_theme.'" />',"\n";
+    echo '<link rel="stylesheet" href="'.$self->themeurl.'/css/'.$self->_css_theme.'?'.$stamp.'" />',"\n";
 
 if (!empty($self->_icon_theme))
     echo '<link rel="stylesheet" href="'.$self->themeurl.'/images/'.$self->_icon_theme.'/icon.css?'.$stamp.'" />',"\n";
