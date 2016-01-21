@@ -112,17 +112,33 @@ if (!empty($lastedit)) {
 <div class="bottom">
 <?php
 if ($self->_use_scrollbuttons) {
+    $sf = 'glyphicon';
+    if (!empty($self->_scrollbuttons_font))
+        $sf = $self->_scrollbuttons_font;
+
+    $random = "<i class='$sf $sf-random'></i>";
+    $edit = "<i class='$sf $sf-pencil'></i>";
+    $up = "<i class='$sf $sf-chevron-up'></i>";
+    $down = "<i class='$sf $sf-chevron-down'></i>";
+
+    if (!empty($self->_scrollbuttons)) {
+        $random = $self->_scrollbuttons['random'];
+        $edit = $self->_scrollbuttons['edit'];
+        $up = $self->_scrollbuttons['up'];
+        $down = $self->_scrollbuttons['down'];
+    }
+
     echo '<div class="scroll-buttons">';
-    echo '<a class="random-link" href="'.$self->link_url('?action=randompage').'"><i class="fa fa-random"></i><span style="display:none">Random</span></a>';
+    echo '<a class="random-link" href="'.$self->link_url('?action=randompage').'">'.$random.'<span style="display:none">Random</span></a>';
     $edit_url = $self->link_url($self->page->urlname, '?action=edit');
     $style = '';
     if ($self->source_site) {
         $edit_url = $self->source_site.$edit_url;
         $style = ' style="color:#00a000"';
     }
-    echo '<a class="scroll-button" href="'.$edit_url.'"><i'.$style.' class="fa fa-pencil"></i></a>';
-    echo '<a class="scroll-button" href="javascript:scrollTop();"><i class="fa fa-chevron-up"></i></a>';
-    echo '<a class="scroll-bottom" href="javascript:scrollBottom();"><i class="fa fa-chevron-down"></i></a>';
+    echo '<a class="scroll-button" '.$style.'href="'.$edit_url.'">'.$edit.'</a>';
+    echo '<a class="scroll-button" href="javascript:scrollTop();">'.$up.'</a>';
+    echo '<a class="scroll-bottom" href="javascript:scrollBottom();">'.$down.'</a>';
     echo '</div>';
 }
 

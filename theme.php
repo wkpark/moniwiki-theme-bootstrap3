@@ -12,6 +12,7 @@ $_use_editstat=0; # show editstat bar
 $_use_sharebuttons=1; # show share buttons (pin, fb, tw, g+)
 $_use_sidebar=1; # show sidebar
 $_use_scrollbuttons=1; # show scroll buttons
+#$_scrollbuttons_font='fa'; # scrollbuttons font. default 'glyphicon';
 $_use_switch_pc=0; # show pc-mobile switcher
 $_use_fullsearch=0; # use fullsearch
 $_use_login_menu=0; # show login menu in the navbar
