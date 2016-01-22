@@ -96,15 +96,12 @@ em.underline {
 }
 
 /* logo */
-.navbar-brand span {
-  display:none;
+.navbar-brand {
+  padding:0;
 }
 
-.navbar-brand {
-  background:url(../images/logo.png) no-repeat;
-  background-size: 58px 50px;
-  width: 58px;
-  height: 50px;
+.navbar-brand span {
+  display:none;
 }
 
 .navbar-padding {
