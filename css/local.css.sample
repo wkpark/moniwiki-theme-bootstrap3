@@ -1,0 +1,7 @@
+/* local.css sample file */
+.navbar-brand {
+  background:url(../images/moniwiki-logo.png) no-repeat;
+  background-size: 58px 50px;
+  height: 50px;
+  width: 58px;
+}
