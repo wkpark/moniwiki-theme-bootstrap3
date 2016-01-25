@@ -186,6 +186,34 @@ aside {
   border:0;
 }
 
+/* folding macro */
+.section div.closed { display:none; }
+
+.styling h1.heading.opened,
+.styling h2.heading.opened,
+.styling h3.heading.opened,
+.styling h4.heading.opened,
+.styling h5.heading.opened,
+.styling h6.heading.opened {
+  padding-left: 1.5rem;
+  /* margin-left: -12px; */
+  background: url(../../../imgs/misc/open.png) no-repeat 3px 0.3rem;
+  background-size: 1rem 1rem;
+}
+
+.styling h1.heading.closed,
+.styling h2.heading.closed,
+.styling h3.heading.closed,
+.styling h4.heading.closed,
+.styling h5.heading.closed,
+.styling h6.heading.closed {
+  padding-left: 1.5rem;
+  /* margin-left: -12px; */
+  background: url(../../../imgs/misc/close.png) no-repeat 3px 0.3rem;
+  background-size: 1rem 1rem;
+}
+
+
 #wikiContent {
   padding-left:10px;
 }
