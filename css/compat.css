@@ -263,6 +263,7 @@ div.wikiInfo { overflow-x: auto; }
   width:90px;
 }
 
+#wikiBody .foot ul,
 .foot ul,
 #wikiSister ul {
   margin-left: 0;
