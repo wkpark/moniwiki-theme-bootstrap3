@@ -16,7 +16,7 @@ if (function_exists('local_bottom_banner'))
 if (function_exists('local_is_savemode')) {
    $savemode = local_is_savemode();
 } else {
-   $savemode = $options['is_robot'];
+   $savemode = !empty($options['is_robot']);
 }
 
 $self->_savemode = $savemode;

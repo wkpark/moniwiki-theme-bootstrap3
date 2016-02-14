@@ -74,7 +74,7 @@ $self->_login_url = $login_url;
 $self->_logout_url = $logout_url;
 
 // check robot to show sidbar conditionally
-$is_robot = $options['is_robot'];
+$is_robot = isset($options['is_robot']) ? $options['is_robot'] : false;
 $use_sidebar = $self->_use_sidebar;
 if ($use_sidebar)
     $use_sidebar = !$is_mobile && !$is_robot;
@@ -305,7 +305,7 @@ function scrollBottom() {
 </head>
 <?php
 // send header only.
-if ($options['.header'])
+if (!empty($options['.header']))
     return;
 ?>
 <body>
@@ -351,6 +351,8 @@ $tools_text = !empty($self->_tools_menu) ? $self->_tools_menu : _("Tools");
 
 if (!empty($self->_use_fullsearch))
     $fullsearch_btn = "<button type='submit' name='search' value='$fullsearch' class='btn btn-default'><i class=\"glyphicon glyphicon-zoom-in\"></i></button>";
+else
+    $fullsearch_btn = '';
 
 $searchform = <<<FORM
 <form class="navbar-form navbar-right" id='go' action='' method='get' onsubmit="return moin_submit();">
