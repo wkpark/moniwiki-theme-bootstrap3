@@ -16,12 +16,12 @@ if (function_exists('local_bottom_banner'))
 if (function_exists('local_is_savemode')) {
    $savemode = local_is_savemode();
 } else {
-   $savemode = !empty($options['is_robot']);
+   $savemode = false;
 }
 
-$self->_savemode = $savemode;
+$sidebar = $self->_use_sidebar && !$savemode && empty($options['is_robot']);
 
-if ($self->_use_sidebar && !$savemode):
+if ($sidebar):
 ?>
 <aside>
 <div style='text-align:center'>
