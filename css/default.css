@@ -703,6 +703,12 @@ blockquote.quote:before {
   color: #879EAD;
   margin: -36px 20px 0 -50px;
 }
+blockquote.quote blockquote.quote {
+  margin: 0.5em 0.5em;
+}
+blockquote.quote blockquote.quote:before {
+  content: '';
+}
 /* sectionEdit */
 .sectionEdit {
   margin-top: 4px;
