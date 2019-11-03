@@ -137,8 +137,8 @@ if ($self->_use_scrollbuttons) {
         $style = ' style="color:#00a000"';
     }
     echo '<a class="scroll-button" '.$style.'href="'.$edit_url.'">'.$edit.'</a>';
-    echo '<a class="scroll-button" href="javascript:scrollTop();">'.$up.'</a>';
-    echo '<a class="scroll-bottom" href="javascript:scrollBottom();">'.$down.'</a>';
+    echo '<a class="scroll-button" href="javascript:window.scrollTo(0,0);">'.$up.'</a>';
+    echo '<a class="scroll-bottom" href="javascript:window.scrollTo(0,document.body.scrollHeight);">'.$down.'</a>';
     echo '</div>';
 }
 
