@@ -138,7 +138,7 @@ if ($self->_use_scrollbuttons) {
     }
     echo '<a class="scroll-button" '.$style.'href="'.$edit_url.'">'.$edit.'</a>';
     echo '<a class="scroll-button" href="javascript:window.scrollTo(0,0);">'.$up.'</a>';
-    echo '<a class="scroll-bottom" href="javascript:window.scrollTo(0,10000);">'.$down.'</a>';
+    echo '<a class="scroll-bottom" href="javascript:window.scrollTo(0,document.body.scrollHeight);">'.$down.'</a>';
     echo '</div>';
 }
 
